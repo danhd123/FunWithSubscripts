@@ -10,6 +10,9 @@
 		BC6E0A7F177427C8007840FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6E0A7E177427C8007840FC /* Foundation.framework */; };
 		BC6E0A82177427C8007840FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6E0A81177427C8007840FC /* main.m */; };
 		BC6E0A86177427C8007840FC /* SubscriptingTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC6E0A85177427C8007840FC /* SubscriptingTest.1 */; };
+		BC6E0A8F177427EF007840FC /* NSString+Indexing.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6E0A8E177427EF007840FC /* NSString+Indexing.m */; };
+		BCACEF2417767C9D00AE8C44 /* NSURL+SubscriptCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = BCACEF2317767C9D00AE8C44 /* NSURL+SubscriptCreation.m */; };
+		BCFD64F9177778260020F7EB /* NSObject+Subscripts.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCAA8DB17742A4600EC0D84 /* NSObject+Subscripts.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +34,12 @@
 		BC6E0A81177427C8007840FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BC6E0A84177427C8007840FC /* SubscriptingTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SubscriptingTest-Prefix.pch"; sourceTree = "<group>"; };
 		BC6E0A85177427C8007840FC /* SubscriptingTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SubscriptingTest.1; sourceTree = "<group>"; };
+		BC6E0A8D177427EF007840FC /* NSString+Indexing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Indexing.h"; sourceTree = "<group>"; };
+		BC6E0A8E177427EF007840FC /* NSString+Indexing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Indexing.m"; sourceTree = "<group>"; };
+		BCACEF2217767C9D00AE8C44 /* NSURL+SubscriptCreation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+SubscriptCreation.h"; sourceTree = "<group>"; };
+		BCACEF2317767C9D00AE8C44 /* NSURL+SubscriptCreation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+SubscriptCreation.m"; sourceTree = "<group>"; };
+		BCCAA8DA17742A4600EC0D84 /* NSObject+Subscripts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Subscripts.h"; sourceTree = "<group>"; };
+		BCCAA8DB17742A4600EC0D84 /* NSObject+Subscripts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Subscripts.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +82,7 @@
 		BC6E0A80177427C8007840FC /* SubscriptingTest */ = {
 			isa = PBXGroup;
 			children = (
+				BC6E0A8C177427D4007840FC /* Categories */,
 				BC6E0A81177427C8007840FC /* main.m */,
 				BC6E0A85177427C8007840FC /* SubscriptingTest.1 */,
 				BC6E0A83177427C8007840FC /* Supporting Files */,
@@ -86,6 +96,19 @@
 				BC6E0A84177427C8007840FC /* SubscriptingTest-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC6E0A8C177427D4007840FC /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BC6E0A8D177427EF007840FC /* NSString+Indexing.h */,
+				BC6E0A8E177427EF007840FC /* NSString+Indexing.m */,
+				BCCAA8DA17742A4600EC0D84 /* NSObject+Subscripts.h */,
+				BCCAA8DB17742A4600EC0D84 /* NSObject+Subscripts.m */,
+				BCACEF2217767C9D00AE8C44 /* NSURL+SubscriptCreation.h */,
+				BCACEF2317767C9D00AE8C44 /* NSURL+SubscriptCreation.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC6E0A82177427C8007840FC /* main.m in Sources */,
+				BC6E0A8F177427EF007840FC /* NSString+Indexing.m in Sources */,
+				BCACEF2417767C9D00AE8C44 /* NSURL+SubscriptCreation.m in Sources */,
+				BCFD64F9177778260020F7EB /* NSObject+Subscripts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +236,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SubscriptingTest/SubscriptingTest-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -219,6 +246,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SubscriptingTest/SubscriptingTest-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -242,6 +270,7 @@
 				BC6E0A8B177427C8007840FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
